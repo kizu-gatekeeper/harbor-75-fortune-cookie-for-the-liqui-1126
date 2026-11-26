@@ -12,7 +12,7 @@ MAX_WORDS = 20
 
 
 def main() -> None:
-    # Validate the entry format before writing anything.
+    # Check the fortune fits the gate (one line, word and character limits) before writing it.
     assert "\n" not in ENTRY, "entry must be a single line"
     assert ENTRY.strip(), "entry must not be blank"
     assert len(ENTRY) <= MAX_CHARS, f"entry is {len(ENTRY)} chars, max is {MAX_CHARS}"
